@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>#WARNING</key>
+	<string>This file is heavily modified for use with @velickovicdj's OpenCore Sanity Checker. Do NOT try loading it.</string>
+	<key>Link</key>
+	<intelprd><link href="https://dortania.github.io/OpenCore-Install-Guide/config.plist/penryn.html">Desktop Yonah, Conroe and Penryn</link></intelprd>
+	<intelcdd><link href="https://dortania.github.io/OpenCore-Install-Guide/config.plist/clarkdale.html">Desktop Lynnfield and Clarkdale</link></intelcdd>
+	<intelsbd><link href="https://dortania.github.io/OpenCore-Install-Guide/config.plist/sandy-bridge.html">Desktop Sandy Bridge</link></intelsbd>
+	<intelibd><link href="https://dortania.github.io/OpenCore-Install-Guide/config.plist/ivy-bridge.html">Desktop Ivy Bridge</link></intelibd>
+	<intelhwd><link href="https://dortania.github.io/OpenCore-Install-Guide/config.plist/haswell.html">Desktop Haswell and Broadwell</link></intelhwd>
+	<intelsld><link href="https://dortania.github.io/OpenCore-Install-Guide/config.plist/skylake.html">Desktop Skylake</link></intelsld>
+	<intelkld><link href="https://dortania.github.io/OpenCore-Install-Guide/config.plist/kaby-lake.html">Desktop Kaby Lake</link></intelkld>
+	<intelcfld><link href="https://dortania.github.io/OpenCore-Install-Guide/config.plist/coffee-lake.html">Desktop Coffee Lake</link></intelcfld>
+	<intelcld><link href="https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html">Desktop Comet Lake</link></intelcld>
+	<inteladl><link href="https://dortania.github.io/OpenCore-Install-Guide/config-laptop.plist/arrandale.html">Laptop Clarksfield and Arrandale</link></inteladl>
+	<intelsbl><link href="https://dortania.github.io/OpenCore-Install-Guide/config-laptop.plist/sandy-bridge.html">Laptop Sandy Bridge</link></intelsbl>
+	<intelibl><link href="https://dortania.github.io/OpenCore-Install-Guide/config-laptop.plist/ivy-bridge.html">Laptop Ivy Bridge</link></intelibl>
+	<intelhwl><link href="https://dortania.github.io/OpenCore-Install-Guide/config-laptop.plist/haswell.html">Laptop Haswell</link></intelhwl>
+	<intelbwl><link href="https://dortania.github.io/OpenCore-Install-Guide/config-laptop.plist/broadwell.html">Laptop Broadwell</link></intelbwl>
+	<intelsll><link href="https://dortania.github.io/OpenCore-Install-Guide/config-laptop.plist/skylake.html">Laptop Skylake</link></intelsll>
+	<intelkll><link href="https://dortania.github.io/OpenCore-Install-Guide/config-laptop.plist/kaby-lake.html">Laptop Kaby Lake</link></intelkll>
+	<intelcfll><link href="https://dortania.github.io/OpenCore-Install-Guide/config-laptop.plist/coffee-lake.html">Laptop Coffee Lake and Whiskey Lake</link></intelcfll>
+	<intelcll><link href="https://dortania.github.io/OpenCore-Install-Guide/config-laptop.plist/coffee-lake-plus.html">Laptop Coffe Lake Plus and Comet Lake</link></intelcll>
+	<intelill><link href="https://dortania.github.io/OpenCore-Install-Guide/config-laptop.plist/icelake.html">Laptop Ice Lake</link></intelill>
+	<intelnh><link href="https://dortania.github.io/OpenCore-Install-Guide/config-HEDT/nehalem.html">Nehalem and Westmere</link></intelnh>
+	<intelibe><link href="https://dortania.github.io/OpenCore-Install-Guide/config-HEDT/ivy-bridge-e.html">Sandy and Ivy Bridge-E</link></intelibe>
+	<intelhwe><link href="https://dortania.github.io/OpenCore-Install-Guide/config-HEDT/haswell-e.html">Haswell-E</link></intelhwe>
+	<intelbwe><link href="https://dortania.github.io/OpenCore-Install-Guide/config-HEDT/broadwell-e.html">Broadwell-E</link></intelbwe>
+	<intelslx><link href="https://dortania.github.io/OpenCore-Install-Guide/config-HEDT/skylake-x.html">Skylake-X/W and Cascade Lake-X/W</link></intelslx>
+	<amdfx><link href="https://dortania.github.io/OpenCore-Install-Guide/AMD/fx.html">AMD FX</link></amdfx>
+	<amdzen><link href="https://dortania.github.io/OpenCore-Install-Guide/AMD/zen.html">AMD Zen</link></amdzen>
+	<key>ACPI</key>
+	<dict>
+		<key>Add</key>
+		<dict status="warning">
+			<key>dsdt.aml</key>
+			<string>You should not be including your dumped DSDT.</string>
+			<key>ssdt.aml</key>
+			<string>Please rename this to something more descriptive.</string>
+			<intelprdintelcddintelsbdintelibdintelhwdintelsldintelkldintelcfldinteladlintelsblinteliblintelhwlintelbwlintelsllintelcfllintelcllamdfxamdzen status="warning">
+				<key>ssdtrhub.aml</key>
+				<string>is only relevant for Intel's 10th gen CPUs with 400 series motherboards.</string>
+			</intelprdintelcddintelsbdintelibdintelhwdintelsldintelkldintelcfldinteladlintelsblinteliblintelhwlintelbwlintelsllintelcfllintelcllamdfxamdzen>
+			<intelprdintelcddintelsbdintelhwdintelsldintelkldinteladlintelsblinteliblintelhwlintelbwlntelsllintelkllamdfxamdzen status="warning">
+				<key>ssdtpmc.aml</key>
+				<string>is only relevant for Intel's 8th and 9th gen CPUs with 300 series motherboards.</string>
+			</intelprdintelcddintelsbdintelhwdintelsldintelkldinteladlintelsblinteliblintelhwlintelbwlntelsllintelkllamdfxamdzen>
+			<intelcldintelill status="warning">
+				<key>ssdtpmc.aml</key>
+				<string>is not needed for your system as NVRAM is native on 10th gen motherboards.</string>
+			</intelcldintelill>
+			<intelprdintelcddintelsbdintelibdintelhwdintelsldintelkldintelcfldintelcldintelnhintelibeintelhweintelbweintelslxamdfxamdfxamdzen status="warning">
+				<key>ssdteclaptop.aml</key>
+				<string>is only relevant for laptops.</string>
+				<key>ssdtecusbxlaptop.aml</key>
+				<string>is only relevant for laptops.</string>
+				<key>ssdtxosi.aml</key>
+				<string>is only relevant for laptops.</string>
+				<key>ssdtgpio.aml</key>
+				<string>is only relevant for laptops.</string>
+				<key>ssdtpnlf.aml</key>
+				<string>is only relevant for laptops.</string>
+				<key>ssdtpnlfcfl.aml</key>
+				<string>is only relevant for laptops.</string>	
+				<key>ssdtals.aml</key>
+				<string>is only relevant for laptops.</string>
+				<key>ssdtals0.aml</key>
+				<string>is only relevant for laptops.</string>
+			</intelprdintelcddintelsbdintelibdintelhwdintelsldintelkldintelcfldintelcldintelnhintelibeintelhweintelbweintelslxamdfxamdfxamdzen>
+			<intelprdintelcddintelsbdintelibdinteladlintelsblintelibl status="warning">
+				<key>ssdtplug.aml</key>
+				<string>is only compatible with Intel's Haswell and newer CPUs.</string>
+			</intelprdintelcddintelsbdintelibdinteladlintelsblintelibl>
+			<intelprdintelcddintelsbdintelibdintelhwdinteladlintelsblinteliblintelhwlintelbwlintelnhintelibe status="warning">
+				<key>ssdtecusbx.aml</key>
+				<string>USBX device is only required for Intel Skylake and newer.</string>
+			</intelprdintelcddintelsbdintelibdintelhwdinteladlintelsblinteliblintelhwlintelbwlintelnhintelibe>
+			<intelsldintelkldintelcfldintelcldintelsllintelkllintelcfllintelcllintelillintelhweintelbweintelslxamdfxamdzen status="warning">
+				<key>ssdtec.aml</key>
+				<string>USBX device is required for your system.</string>
+			</intelsldintelkldintelcfldintelcldintelsllintelkllintelcfllintelcllintelillintelhweintelbweintelslxamdfxamdzen>
+			<intelprdintelcddintelhwdintelsldintelkldintelcfldintelcldinteladlintelhwlintelbwlintelsllintelkllintelcfllintelcllintelillintelnhintelibeintelhweintelbweintelslxamdfxamdzen status="warning">
+				<key>ssdtpm.aml</key>
+				<string>is only relevant for Intel's Sandy Bridge and Ivy Bridge CPUs.</string>
+				<key>ssdtimei.aml</key>
+				<string>is only relevant for Intel's Sandy Bridge and Ivy Bridge CPUs.</string>
+			</intelprdintelcddintelhwdintelsldintelkldintelcfldintelcldinteladlintelhwlintelbwlintelsllintelkllintelcfllintelcllintelillintelnhintelibeintelhweintelbweintelslxamdfxamdzen>
+			<intelprdintelcddintelsbdintelibdintelhwdintelsldintelkldintelcfldintelcldinteladlintelsblinteliblintelhwlintelbwlintelsllintelkllintelcfllintelcllintelillintelnhintelibeintelhweintelbweintelslxamdfx status="warning">
+				<key>ssdtcpur.aml</key>
+				<string>is only relevant for AMD's Zen CPUs with B550 and A520 motherboards.</string>
+			</intelprdintelcddintelsbdintelibdintelhwdintelsldintelkldintelcfldintelcldinteladlintelsblinteliblintelhwlintelbwlintelsllintelkllintelcfllintelcllintelillintelnhintelibeintelhweintelbweintelslxamdfx>
+		</dict>
+		<intelhwlintelbwlintelsllintelkllintelcfllintelcllintelill>
+			<key status="info">Patch</key>
+			<string>If you use SSTD-XOSI.aml for enabling the trackpad, make sure to include <link href="https://dortania.github.io/Getting-Started-With-ACPI/Laptops/trackpad-methods/manual.html#osi-to-xosi">_OSI to XOSI rename</link> here.</string>
+		</intelhwlintelbwlintelsllintelkllintelcfllintelcllintelill>
+	</dict>
+	<key>Kernel</key>
+	<dict>
+		<key>Add</key>
+		<dict status="warning">
+			<key>nullcpupowermanagement.kext</key>
+			<string>is already integrated into <bold>DummyPowerManagement</bold> under <bold>Kernel -> Emulate</bold>.</string>
+			<key>bt4lecontinuityfixup.kext</key>
+			<string>is already integrated into <bold>ExtendBTFeatureFlags</bold> under <bold>Kernel -> Quirks</bold>.</string>
+			<intelprdintelcddintelsbdintelibdintelhwdintelsldintelkldintelcfldintelcldintelnhintelibeintelhweintelbweintelslxamdfxamdfxamdzen status="warning">
+				<key>smclightsensor.kext</key>
+				<string>is only relevant for laptops.</string>
+				<key>smcbatterymanager.kext</key>
+				<string>is only relevant for laptops.</string>
+				<key>voodoops2controller.kext</key>
+				<string>is only relevant for laptops.</string>
+				<key>voodooi2c.kext</key>
+				<string>is only relevant for laptops.</string>
+				<key>voodooi2chid.kext</key>
+				<string>is only relevant for laptops.</string>
+				<key>voodooi2celan.kext</key>
+				<string>is only relevant for laptops.</string>
+				<key>voodooi2cfte.kext</key>
+				<string>is only relevant for laptops.</string>
+				<key>voodooi2catmelmxt.kext</key>
+				<string>is only relevant for laptops.</string>
+				<key>alpshid.kext</key>
+				<string>is only relevant for laptops.</string>
+				<key>voodoormi.kext</key>
+				<string>is only relevant for laptops.</string>
+				<key>voodoosmbus.kext</key>
+				<string>is only relevant for laptops.</string>
+				<key>ecenabler.kext</key>
+				<string>is only relevant for laptops.</string>
+				<key>brightnesskeys.kext</key>
+				<string>is only relevant for laptops.</string>
+			</intelprdintelcddintelsbdintelibdintelhwdintelsldintelkldintelcfldintelcldintelnhintelibeintelhweintelbweintelslxamdfxamdfxamdzen>
+			<amdfxamdzen status="error">
+				<key>smcprocessor.kext</key>
+				<string>doesn't work on AMD CPU based systems.</string>
+				<key>smcsuperio.kext</key>
+				<string>doesn't work on AMD CPU based systems.</string>
+				<key>usbinjectall.kext</key>
+				<string>doesn't work on AMD CPUs.</string>
+				<key>cputscsync.kext</key>
+				<string>doesn't work on AMD CPUs.</string>
+				<key>xhci-unsupported.kext</key>
+				<string>is not needed for AMD CPU based systems.</string>
+			</amdfxamdzen>
+			<amdzen status="warning">
+				<key>xlncusbfix.kext</key>
+				<string>is not recommended for AMD Zen systems.</string>
+			</amdzen>
+		</dict>
+		<key>Emulate</key>
+		<dict>
+			<intelhweintelbwe status="error">
+				<key>Cpuid1Data</key>
+				<string>Your system requires CPU spoofing, check <link href="https://dortania.github.io/OpenCore-Install-Guide/config-HEDT/haswell-e.html#emulate">Kernel Emulate</link>.</string>
+				<key>Cpuid1Mask</key>
+				<string>Your system requires CPU spoofing, check <link href="https://dortania.github.io/OpenCore-Install-Guide/config-HEDT/haswell-e.html#emulate">Kernel Emulate</link>.</string>
+			</intelhweintelbwe>
+		</dict>
+		<amdfxamdzen>
+			<key status="info">Patch</key>
+			<string>AMD Kernel patches go here.</string>
+		</amdfxamdzen>
+		<key>Quirks</key>
+		<dict>
+			<key>AppleCpuPmCfgLock</key>
+			<dict>
+				<key status="correct">YES</key>
+				<string>If CFG-Lock is disabled in BIOS, you can disable this quirk.</string>
+				<intelprd status="warning">
+					<string>CFG-Lock is not present on Intel Penryn, so there's no need for this quirk to be enabled.</string>
+				</intelprd>
+				<intelhwdintelhwlintelbwlintelhweintelbwe status="warning">
+					<string>Unless you are running OS X 10.10 or older and cannot disable CFG-Lock in BIOS, disable this quirk.</string>
+				</intelhwdintelhwlintelbwlintelhweintelbwe>
+				<intelsldintelkldintelcfldintelcldintelsllintelkllintelcfllintelcllintelillintelslx status="warning">
+					<string>This quirk is only applicable for Intel Broadwell and older, so there's no need to leave it enabled.</string>
+				</intelsldintelkldintelcfldintelcldintelsllintelkllintelcfllintelcllintelillintelslx>
+				<amdfxamdzen status="warning">
+					<string>This quirk is only relevant for Intel CPUs, so there's no need to leave it enabled.</string>
+				</amdfxamdzen>
+				<key status="correct">NO</key>
+				<string/>
+				<intelhwdintelhwlintelbwlintelhweintelbwe status="correct">
+					<string>If running OS X 10.10 or older and cannot disable CFG-Lock in BIOS, enable this quirk.</string>
+				</intelhwdintelhwlintelbwlintelhweintelbwe>
+				<intelcddintelsbdintelibdinteladlintelsblinteliblintelnhintelibe status="warning">
+					<string>Make sure that CFG-Lock is disabled in BIOS or enable this quirk.</string>
+				</intelcddintelsbdintelibdinteladlintelsblinteliblintelnhintelibe>
+			</dict>
+			<key>AppleXcpmCfgLock</key>
+			<dict>
+				<key status="correct">YES</key>
+				<string>If CFG-Lock is disabled in BIOS, you can disable this quirk.</string>
+				<intelprd status="warning">
+					<string>CFG-Lock is not present on Intel Penryn, so there's no need for this quirk to be enabled.</string>
+				</intelprd>
+				<intelcddintelsbdintelibdinteladlintelsblinteliblintelnhintelibe status="warning">
+					<string>This quirk is only applicable for Intel Haswell and newer, so there's no need to leave it enabled.</string>
+				</intelcddintelsbdintelibdinteladlintelsblinteliblintelnhintelibe>
+				<amdfxamdzen status="warning">
+					<string>This quirk is only relevant for Intel CPUs, so there's no need to leave it enabled.</string>
+				</amdfxamdzen>
+				<key status="warning">NO</key>
+				<string>Make sure that CFG-Lock is disabled in BIOS or enable this quirk.</string>
+				<intelprdintelcddintelsbdintelibdinteladlintelsblinteliblintelnhintelibeamdfxamdzen status="correct">
+					<string/>
+				</intelprdintelcddintelsbdintelibdinteladlintelsblinteliblintelnhintelibeamdfxamdzen>
+			</dict>
+			<key>AppleXcpmExtraMsrs</key>
+			<dict>
+				<key status="warning">YES</key>
+				<string>This quirk is only relevant for Intel's unsupported Pentium and certain Xeon CPUs, so there's no need to leave it enabled.</string>
+				<intelnhintelibeintelhweintelbwe status="correct">
+					<string/>
+				</intelnhintelibeintelhweintelbwe>
+				<amdfxamdzen status="warning">
+					<string>This quirk is only relevant for Intel CPUs, so there's no need to leave it enabled.</string>
+				</amdfxamdzen>
+			</dict>
+			<key>AppleXcpmForceBoost</key>
+			<dict>
+				<key status="correct">YES</key>
+				<string/>
+				<amdfxamdzen status="warning">
+					<string>This quirk is only relevant for Intel CPUs, so there's no need to leave it enabled.</string>
+				</amdfxamdzen>
+			</dict>
+			<inteladlintelsblinteliblintelhwlintelbwlintelsllintelkllintelcfllintelcllintelill>
+				<key>CustomSMBIOSGuid</key>
+				<dict>
+					<key status="warning">YES</key>
+					<string>Unless your laptop is Dell, disable this quirk.</string>
+					<key status="correct">NO</key>
+					<string>If your laptop is Dell, enable this quirk.</string>
+				</dict>
+			</inteladlintelsblinteliblintelhwlintelbwlintelsllintelkllintelcfllintelcllintelill>
+			<key>DisableIoMapper</key>
+			<dict>
+				<key status="correct">YES</key>
+				<string>If VT-D is disabled in BIOS, you can disable this quirk.</string>
+				<amdfxamdzen status="warning">
+					<string>This quirk is only relevant for Intel CPUs, so there's no need to leave it enabled.</string>
+				</amdfxamdzen>
+				<key status="warning">NO</key>
+				<string>Make sure that VT-D is disabled in BIOS or enable this quirk.</string>
+				<amdfxamdzen status="correct">
+					<string/>
+				</amdfxamdzen>
+			</dict>
+			<key>LapicKernelPanic</key>
+			<dict>
+				<key status="warning">YES</key>
+				<string>Unless your system is HP, disable this quirk.</string>
+				<key status="correct">NO</key>
+				<string>If your system is HP, enable this quirk.</string>
+			</dict>
+			<key>XhciPortLimit</key>
+			<dict>
+				<key status="correct">YES</key>
+				<string/>
+				<intelibdintelhwdintelsldintelkldintelcfldintelcldinteliblintelhwlintelbwlintelsllintelkllintelcfllintelcllintelillintelhweintelbweintelslxamdfxamdzen status="correct">
+					<string>If running OS X 11.3+, disable this quirk.</string>
+				</intelibdintelhwdintelsldintelkldintelcfldintelcldinteliblintelhwlintelbwlintelsllintelkllintelcfllintelcllintelillintelhweintelbweintelslxamdfxamdzen>
+				<intelcddintelsbdinteladlintelsblintelnhintelibe status="correct">
+					<string>If your board doesn't support USB 3.0, you can disable this quirk.</string>
+				</intelcddintelsbdinteladlintelsblintelnhintelibe>
+				<key status="correct">NO</key>
+				<string/>
+				<intelibdintelhwdintelsldintelkldintelcfldintelcldinteliblintelhwlintelbwlintelsllintelkllintelcfllintelcllintelillintelhweintelbweintelslxamdfxamdzen status="correct">
+					<string>If running OS X versions older than 11.3, you can enable this quirk.</string>
+				</intelibdintelhwdintelsldintelkldintelcfldintelcldinteliblintelhwlintelbwlintelsllintelkllintelcfllintelcllintelillintelhweintelbweintelslxamdfxamdzen>
+				<intelcddintelsbdinteladlintelsblintelnhintelibe status="correct">
+					<string>If your board supports USB 3.0, you can enable this quirk.</string>
+				</intelcddintelsbdinteladlintelsblintelnhintelibe>
+			</dict>
+		</dict>
+	</dict>
+	<key>Misc</key>
+	<dict>
+		<key>Boot</key>
+		<dict status="correct">
+			<key>PickerVariant</key>
+			<string/>
+		</dict>
+		<key>Debug</key>
+		<dict status="correct">
+			<key>AppleDebug</key>
+			<dict>
+				<key status="correct">NO</key>
+				<string>Enable if debugging.</string>
+			</dict>
+			<key>ApplePanic</key>
+			<dict>
+				<key status="correct">NO</key>
+				<string>Enable if debugging.</string>
+			</dict>
+			<key>DisableWatchDog</key>
+			<dict>
+				<key status="correct">NO</key>
+				<string>Enable if OpenCore stalls on something non-critical.</string>
+			</dict>
+			<key>DisplayLevel</key>
+			<string>See <link href="https://dortania.github.io/OpenCore-Install-Guide/troubleshooting/debug.html">OpenCore Debugging</link> for more info on debug display levels.</string>
+			<key>Target</key>
+			<string>See <link href="https://dortania.github.io/OpenCore-Install-Guide/troubleshooting/debug.html">OpenCore Debugging</link> for more info on debug target numbers.</string>
+		</dict>
+		<key>Security</key>
+		<dict status="correct">
+			<key>ScanPolicy</key>
+			<string>See <link href="https://dortania.github.io/OpenCore-Post-Install/universal/security/scanpolicy.html">OpenCore ScanPolicy</link> for more info on why you should set this quirk.</string>
+			<key>SecureBootModel</key>
+			<dict>
+				<key status="correct">Disabled</key>
+				<string>If running macOS Big Sur or newer, set this to <bold>Default</bold>.</string>
+			</dict>
+			<key>Vault</key>
+			<dict status="warning">
+				<key status="correct">Optional</key>
+				<string/>
+				<key>Basic</key>
+				<string>Unless you know what you are doing, set this to <bold>Optional</bold>.</string>
+				<key>Secure</key>
+				<string>Unless you know what you are doing, set this to <bold>Optional</bold>.</string>
+			</dict>
+		</dict>
+		<key>Tools</key>
+		<dict/>
+	</dict>
+	<key>NVRAM</key>
+	<dict>
+		<key>Add</key>
+		<dict status="correct">
+			<key>DefaultBackgroundColor</key>
+			<string/>
+			<key>SystemAudioVolume</key>
+			<string/>
+			<key>boot-args</key>
+			<string>You may need <bold>alcid</bold> or some debug-related boot-args.</string>
+			<key>prev-lang:kbd</key>
+			<string>Unless you speak this language, set this to <bold>en-US:0</bold>.</string>
+			<key status="warning">rtc-blacklist</key>
+			<string>Unless you have RTC write issues, leave this blank.</string>
+			<key status="info">csr-active-config</key>
+			<string>It is generally recommended to leave this as <bold>00000000</bold> and change SIP with <bold>csrutil</bold> via the recovery partition.</string>
+		</dict>
+	</dict>
+	<key>PlatformInfo</key>
+	<dict>
+		<key>Generic</key>
+		<dict status="correct">
+			<key>SystemMemoryStatus</key>
+			<string>This qurik is purely cosmetic.</string>
+		</dict>
+	</dict>
+	<key>UEFI</key>
+	<dict>
+		<key>APFS</key>
+		<dict />
+		<key>ConnectDrivers</key>
+		<dict>
+			<key status="warning">NO</key>
+			<string>Although it might slightly speed up the boot time, leaving this quirk disabled can cause certain drivers not to load.</string>
+		</dict>
+		<key>Audio</key>
+		<dict status="correct">
+			<key>AudioDevice</key>
+			<string/>
+			<key>MinimumVolume</key>
+			<string/>
+		</dict>
+		<key>Drivers</key>
+		<dict status="warning">
+			<key>apfs.efi</key>
+			<string>is already included in OpenCore.</string>
+			<key>apfsdriverloader.efi</key>
+			<string>is already included in OpenCore.</string>
+			<key>appleevent.efi</key>
+			<string>is already included in OpenCore.</string>
+			<key>applegenericinput.efi</key>
+			<string>is already included in OpenCore.</string>
+			<key>appleimagecodec.efi</key>
+			<string>is already included in OpenCore.</string>
+			<key>applekeymapaggregator.efi</key>
+			<string>is already included in OpenCore.</string>
+			<key>appleuisupport.efi</key>
+			<string>is already included in OpenCore.</string>
+			<key>appleuitheme.efi</key>
+			<string>is already included in OpenCore.</string>
+			<key>aptioinputfix.efi</key>
+			<string>is already included in OpenCore.</string>
+			<key>aptiomemoryfix.efi</key>
+			<string>is already included in OpenCore.</string>
+			<key>bootchimedxe.efi</key>
+			<string>is already included in OpenCore.</string>
+			<key>datahubdxe.efi</key>
+			<string>is already included in OpenCore.</string>
+			<key>emuvariableuefi.efi</key>
+			<string>is already included in OpenCore.</string>
+			<key>englishdxe.efi</key>
+			<string>is already included in OpenCore.</string>
+			<key>firmwarevolume.efi</key>
+			<string>is already included in OpenCore.</string>
+			<key>hashservicefix.efi</key>
+			<string>is already included in OpenCore.</string>
+			<key>smchelper.efi</key>
+			<string>is already included in OpenCore.</string>
+			<key>ocquirks.efi</key>
+			<string>is already included in OpenCore.</string>
+			<key>virtualsmc.efi</key>
+			<string>is already included in OpenCore.</string>	
+			<key status="error">appleusbkbdxe.efi</key>
+			<string>is unsupported, use OpenUsbKbDxe.efi instead.</string>
+			<key status="error">usbkbdxe.efi</key>
+			<string>is unsupported, use OpenUsbKbDxe.efi instead.</string>
+			<key status="error">fwruntimeservices.efi</key>
+			<string>is unsupported, use OpenRuntime.efi instead.</string>
+			<key status="error">fsinject.efi</key>
+			<string>is unsupported!</string>
+			<key status="error">osxaptiofix2drv.efi</key>
+			<string>is unsupported!</string>
+			<key status="error">osxaptiofix3drv.efi</key>
+			<string>is unsupported!</string>
+			<key status="error">osxaptiofixdrv.efi</key>
+			<string>is unsupported!</string>
+			<key status="error">osxfatbinarydrv.efi</key>
+			<string>is unsupported!</string>
+			<key status="error">osxlowmemfixdrv.efi</key>
+			<string>is unsupported!</string>
+		</dict>
+		<key>Input</key>
+		<dict>
+			<intelprdintelcddintelsbdinteladlintelsbl>
+				<key>KeySupport</key>
+				<dict>
+					<key status="warning">YES</key>
+					<string>Unless your BIOS supports UEFI, disable this qurik.</string>
+					<key status="correct">NO</key>
+					<string>If your BIOS supports UEFI, enable this quirk.</string>
+				</dict>
+			</intelprdintelcddintelsbdinteladlintelsbl>
+		</dict>
+	</dict>
+</dict>
+</plist>

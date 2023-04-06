@@ -1,0 +1,108 @@
+
+.reader {
+    display: flex;
+    flex-direction: row;
+    width: var(--default-card-width);
+    height: calc(var(--default-card-width) / 2);
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed var(--border-color);
+    border-radius: var(--default-border-radius);
+    background-color: var(--card-bg);
+    box-shadow: var(--card-shadow);
+
+    &.active { border: 2px solid var(--border-color) }
+
+    header, span {
+        font-size: 23px;
+        font-weight: 400;
+        color: var(--title-color);
+    }
+
+    span { font-weight: 300 }
+
+    .select {
+        display: inherit;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+        height: 75%;
+        border-right: 1px solid var(--border-color);
+
+        .cpu-arch,
+        .oc-version {
+            margin: 30px;
+            width: 75%;
+
+            header { margin: 15px 0 15px 0 }
+
+            select {
+                cursor: pointer;
+                // appearance: none;
+                padding: 5px;
+                max-width: 300px;
+                outline: none;
+                font-size: 15px;
+                border: 1px solid var(--border-color);
+                border-radius: calc(var(--default-border-radius) - 10px);
+                color: var(--title-color);
+                background-color: var(--card-bg);
+            }
+        }
+    }
+
+    .input { 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 50%;
+        height: 75%;
+
+        svg path { fill: var(--title-color) }
+        
+        span {
+            margin: 15px 0 15px 0;
+            font-size: 20px;
+        }
+
+        button {
+            cursor: pointer;
+            padding: 10px 25px;
+            font-size: 15px;
+            font-weight: 400;
+            outline: none;        
+            border: none;
+            border-radius: calc(var(--default-border-radius) - 10px);
+            color: var(--card-bg);
+            background-color: #19b3e7;
+    
+            &:hover { background-color: #00acf0 }
+        }
+
+        #message {
+            margin-top: 15px;
+            font-size: 15px;
+            color: red;
+        }
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .reader {
+        flex-direction: column;
+        width: 90vw;
+        height: 700px;
+
+        .select {
+            width: 75%;
+            text-align: center;
+            border: none;
+            border-bottom: 1px solid var(--border-color);
+
+            .cpu-arch, .oc-version { width: 100% }
+        }
+    }
+}

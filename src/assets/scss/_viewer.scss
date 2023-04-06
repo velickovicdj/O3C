@@ -1,0 +1,56 @@
+.viewer {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    position: relative;
+    width: var( --default-card-width);
+    word-break: break-word;
+    border: 1px solid var(--border-color);
+    border-radius: var(--default-border-radius);
+    background-color: var(--card-bg);
+    box-shadow: var(--card-shadow);
+
+    a {
+        text-decoration: none;
+        color: var(--primary-color);
+    }
+
+    header {
+        line-height: 50px;
+        border-bottom: 2px solid var(--border-color);
+        color: var(--title-color);
+
+        h1 { font-weight: 500; }
+    }
+
+    .errors { padding: 30px 0; }
+    .plist-data {
+
+        h1, h2 {
+            color: var(--title-color);
+            margin: 5px 0;
+        }
+    }
+    
+    .status {
+        display: flex;
+        flex-direction: row;
+        margin: 8px 30px;
+        
+        svg { 
+            overflow: visible; 
+        }
+
+        p { 
+            margin-left: 5px;
+            color: var(--text-color);
+        }
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .viewer {
+        width: 90vw;
+    }
+}

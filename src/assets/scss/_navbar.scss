@@ -1,0 +1,84 @@
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3.6rem;
+    border-bottom: 1px solid var(--border-color);
+    background-color: var(--body-bg);
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+    
+    .logo {
+        display: flex;
+        align-items: center;
+        position: relative;
+        margin-left: 25px;
+        height: 100%;
+        
+        h1 {
+            cursor: pointer;
+            line-height: 3.6rem;
+            font-size: 21px;
+            font-weight: 500;
+            color: var(--title-color);
+        }
+
+        img {
+            max-height: 60%;
+            margin-right: 5px;
+            vertical-align: middle;
+        }
+
+        &:before {
+            content: "Beta";
+            position: absolute;
+            top: 20%;
+            right: -45px;
+            padding: 4px 8px;
+            text-transform: uppercase;
+            font-size: 8px;
+            font-weight: bold;
+            border-radius: calc(var(--default-border-radius) - 10px);
+            color: var(--card-bg);
+            background-color: var(--primary-color);
+          }
+    }
+    
+    ul {
+        float: right;
+        margin-right: 5px;
+        height: 100%;
+        list-style-type: none;
+
+        li {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            margin-right: 25px;
+            line-height: 1.8rem;
+            font-size: 15px;
+            border-bottom: 2px solid transparent;
+            color: var(--title-color);
+
+            a {
+                display: flex;
+                align-items: center;
+                height: 100%;
+                column-gap: 2.5px;
+            }
+
+            &:first-child:hover {
+                border-bottom: 2px solid var(--primary-color);
+            }
+        }
+    }
+}
