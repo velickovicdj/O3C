@@ -188,17 +188,21 @@ const plistParser = {
 							const prop_name = Object.keys(sample_plist[group][section][prop])[0];
 							const prop_value = Object.values(sample_plist[group][section][prop])[0];
 
-							if (typeof user_plist[group][section][prop] === "undefined" && group !== "ACPI") {
-								error_array.push(<span><strong>{prop_value}</strong> is missing in the <strong>{group} -{'>'} {section}</strong> section, which is a crucial component.</span>);
+							if (!(user_plist[group][section].hasOwnProperty(prop))) {
+								if(group !== "ACPI" && section !== "Tools") {
+									error_array.push(<span><strong>{prop_value}</strong> is missing in the <strong>{group} -{'>'} {section}</strong> section, which is a crucial component.</span>);
+								}
 								continue;
 							}
 
+
 							if (!(prop_name in user_plist[group][section][prop])) {
 								error_array.push(<span><strong>{group} -{'>'} {section} -{'>'} {prop_name}</strong> key is missing.</span>);
+								continue;
 							} else if (section === "Add") {
 								const exists = Object.values(user_plist[group][section]).some(obj => obj.hasOwnProperty(prop_name) && obj[prop_name] === sample_plist[group][section][prop][prop_name]);
 
-								if(!exists && group !== "ACPI") {
+								if(!exists && group !== "ACPI" && section !== "Tools") {
 									error_array.push(<span><strong>{prop_value}</strong> is missing in the <strong>{group} -{'>'} {section}</strong> section, which is a crucial component.</span>);						
 								}
 							}

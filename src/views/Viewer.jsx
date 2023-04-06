@@ -128,7 +128,7 @@ export default class Viewer extends React.Component{
 
                                                 for (const prop in ocPlist[group][section]) {
                                                     if (section !== "Tools") {
-                                                        info.push(group+section === "KernelAdd" ? ocPlist[group][section][prop].BundlePath : ocPlist[group][section][prop].Path);
+                                                        info.push(group+section === "KernelAdd" ? ocPlist[group][section][prop]["BundlePath"] : ocPlist[group][section][prop]["Path"]);
                                                     }
                                                 }
                                                 if (userPlist[group][section].length > 0) {
@@ -141,8 +141,8 @@ export default class Viewer extends React.Component{
                                                     }
 
                                                     for (const prop in userPlist[group][section]) {
-                                                        const validFileExtension = ((ocPlist[group][section][Object.keys(ocPlist[group][section])[0]].Path || ocPlist[group][section][Object.keys(ocPlist[group][section])[0]].BundlePath) || ".efi").split('.')[1];
-                                                        const filePath = userPlist[group][section][prop].Path || userPlist[group][section][prop].BundlePath || userPlist[group][section][prop];
+                                                        const validFileExtension = ((ocPlist[group][section][Object.keys(ocPlist[group][section])[0]]["Path"] || ocPlist[group][section][Object.keys(ocPlist[group][section])[0]]["BundlePath"]) || ".efi").split('.')[1];
+                                                        const filePath = userPlist[group][section][prop]["Path"] || userPlist[group][section][prop]["BundlePath"] || userPlist[group][section][prop];
 
                                                         if (typeof filePath !== "string") {
                                                             continue;
