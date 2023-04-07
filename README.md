@@ -32,7 +32,7 @@ Here if the selected CPU arch doesn't match `amdfx` or `amdzen` in `<amdfxamdzen
 
 In addition to the standard properties that are found in the `config.plist`, O3C supports custom tags and properties to provide additional flexibility. These tags and properties are defined in the `comments.plist` and `<version>.plist` files located in the public directory, where `<version>` refers to the specific OpenCore version being used.
 
-Some of the custom tags that are used by OpenCore include:
+Some of the custom tags that are used by O3C include:
 
 - `bold`: Used to display text in bold font
 - `link`: Used to display text as a hyperlink
