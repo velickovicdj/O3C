@@ -160,13 +160,13 @@ const plistParser = {
 				continue;
 			}
 
-			if (!(group in user_plist)) {
+			if (!user_plist.hasOwnProperty(group)) {
 				error_array.push(<span><strong>{group}</strong> group is missing.</span>);
 				continue;
 			}
 
 			for (const section in sample_plist[group]) {
-				if (!(section in user_plist[group])) {
+				if (!user_plist[group].hasOwnProperty(section)) {
 					error_array.push(<span><strong>{group} -{'>'} {section}</strong> section is missing.</span>);
 					continue;
 				}
@@ -196,10 +196,11 @@ const plistParser = {
 							}
 
 
-							if (!(prop_name in user_plist[group][section][prop])) {
+							if (!(user_plist[group][section][prop].hasOwnProperty(prop_name))) {
 								error_array.push(<span><strong>{group} -{'>'} {section} -{'>'} {prop_name}</strong> key is missing.</span>);
 								continue;
-							} else if (section === "Add") {
+							} 
+							else if (section === "Add") {
 								const exists = Object.values(user_plist[group][section]).some(obj => obj.hasOwnProperty(prop_name) && obj[prop_name] === sample_plist[group][section][prop][prop_name]);
 
 								if(!exists && group !== "ACPI" && section !== "Tools") {
@@ -208,7 +209,7 @@ const plistParser = {
 							}
 						}
 					}
-					else if (!(prop in user_plist[group][section])) {
+					else if (!(user_plist[group][section].hasOwnProperty(prop))) {
 						if (group !== "DeviceProperties") {
 							error_array.push(<span><strong>{group} -{'>'} {section} -{'>'} {prop}</strong> key is missing.</span>);
 						}
