@@ -1,4 +1,5 @@
 import React from "react";
+import cpu_arch_list from "../cpuArchList";
 import { ReactComponent as PlistFileIcon } from "../assets/icons/plist.svg";
 
 export default function Reader({ setViewerData }) {
@@ -42,32 +43,7 @@ export default function Reader({ setViewerData }) {
                 <div className="cpu-arch">
                     <header>Choose your CPU architecture</header>
                     <select id="selectcpu" name="selectcpu" defaultValue="intelprd">
-                        <option value="intelprd">Intel Desktop: Yonah, Conroe and Penryn</option>
-                        <option value="intelcdd">Intel Desktop: Lynnfield and Clarkdale</option>
-                        <option value="intelsbd">Intel Desktop: Sandy Bridge</option>
-                        <option value="intelibd">Intel Desktop: Ivy Bridge</option>
-                        <option value="intelhwd">Intel Desktop: Haswell and Broadwell</option>
-                        <option value="intelsld">Intel Desktop: Skylake</option>
-                        <option value="intelkld">Intel Desktop: Kaby Lake</option>
-                        <option value="intelcfld">Intel Desktop: Coffee Lake</option>
-                        <option value="intelcld">Intel Desktop: Comet Lake</option>
-                        <option value="inteladl">Intel Laptop: Clarksfield and Arrandale</option>
-                        <option value="intelsbl">Intel Laptop: Sandy Bridge</option>
-                        <option value="intelibl">Intel Laptop: Ivy Bridge</option>
-                        <option value="intelhwl">Intel Laptop: Haswell</option>
-                        <option value="intelbwl">Intel Laptop: Broadwell</option>
-                        <option value="intelsll">Intel Laptop: Skylake</option>
-                        <option value="intelkll">Intel Laptop: Kaby Lake</option>
-                        <option value="intelcfll">Intel Laptop: Coffee Lake and Whiskey Lake</option>
-                        <option value="intelcll">Intel Laptop: Coffee Lake Plus and Comet Lake</option>
-                        <option value="intelill">Intel Laptop: Ice Lake</option>
-                        <option value="intelnh">Intel HEDT: Nehalem and Westmere</option>
-                        <option value="intelibe">Intel HEDT: Sandy and Ivy Bridge-E</option>
-                        <option value="intelhwe">Intel HEDT: Haswell-E</option>
-                        <option value="intelbwe">Intel HEDT: Broadwell-E</option>
-                        <option value="intelslx">Intel HEDT: Skylake-X/W and Cascade Lake-X/W</option>
-                        <option value="amdfx">AMD Desktop: FX</option>
-                        <option value="amdzen">AMD Desktop: Zen</option>
+                        {cpu_arch_list.map(cpu => <option key={cpu.value} value={cpu.value}>{cpu.text}</option>)}
                     </select>
                 </div>
                 <div className="oc-version">

@@ -1,6 +1,6 @@
 import { Buffer } from "buffer";
+import cpu_arch_list from "./cpuArchList";
 
-const cpu_arch_list = ["intelprd", "intelcdd", "intelsbd", "intelibd", "intelhwd", "intelsld", "intelkld", "intelcfld", "intelcld", "inteladl", "intelsbl", "intelibl", "intelhwl", "intelbwl", "intelsll", "intelkll", "intelcfl", "intelcll", "intelill", "intelnh", "intelibe", "intelhwe", "intelbwe", "intelslx", "amdfx", "amdzen"];
 let cpu_arch = "";
 let comments = false;
 
@@ -34,7 +34,7 @@ const plistParser = {
 						continue;
 					}
 					
-					if (cpu_arch_list.some(cpu => child.nodeName.indexOf(cpu) > -1)) {
+					if (cpu_arch_list.map(cpu => cpu.value).some(cpu => child.nodeName.indexOf(cpu) > -1)) {
 						if (cpu_arch && child.nodeName.indexOf(cpu_arch) > -1) {
 							for (const grandchild of child.childNodes) {
 								if (grandchild.nodeName === "#text") {
@@ -64,7 +64,7 @@ const plistParser = {
 				let array = [];
 
 				for (const child of child_nodes) {
-					if (cpu_arch_list.some(cpu => child.nodeName.indexOf(cpu) > -1)) {
+					if (cpu_arch_list.map(cpu => cpu.value).some(cpu => child.nodeName.indexOf(cpu) > -1)) {
 						if (cpu_arch && child.nodeName.indexOf(cpu_arch) > -1) {
 							for (const grandchild of child.childNodes) {
 								if (grandchild.nodeName !== "#text") {

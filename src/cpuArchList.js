@@ -1,0 +1,30 @@
+const cpu_arch_list = [
+    { value: "intelprd", text: "Intel Desktop: Yonah, Conroe and Penryn" },
+    { value: "intelcdd", text: "Intel Desktop: Lynnfield and Clarkdale" },
+    { value: "intelsbd", text: "Intel Desktop: Sandy Bridge" },
+    { value: "intelibd", text: "Intel Desktop: Ivy Bridge" },
+    { value: "intelhwd", text: "Intel Desktop: Haswell and Broadwell" },
+    { value: "intelsld", text: "Intel Desktop: Skylake" },
+    { value: "intelkld", text: "Intel Desktop: Kaby Lake" },
+    { value: "intelcfld", text: "Intel Desktop: Coffee Lake" },
+    { value: "intelcld", text: "Intel Desktop: Comet Lake" },
+    { value: "inteladl", text: "Intel Laptop: Clarksfield and Arrandale" },
+    { value: "intelsbl", text: "Intel Laptop: Sandy Bridge" },
+    { value: "intelibl", text: "Intel Laptop: Ivy Bridge" },
+    { value: "intelhwl", text: "Intel Laptop: Haswell" },
+    { value: "intelbwl", text: "Intel Laptop: Broadwell" },
+    { value: "intelsll", text: "Intel Laptop: Skylake" },
+    { value: "intelkll", text: "Intel Laptop: Kaby Lake" },
+    { value: "intelcfll", text: "Intel Laptop: Coffee Lake and Whiskey Lake" },
+    { value: "intelcll", text: "Intel Laptop: Coffee Lake Plus and Comet Lake" },
+    { value: "intelill", text: "Intel Laptop: Ice Lake" },
+    { value: "intelnh", text: "Intel HEDT: Nehalem and Westmere" },
+    { value: "intelibe", text: "Intel HEDT: Sandy and Ivy Bridge-E" },
+    { value: "intelhwe", text: "Intel HEDT: Haswell-E" },
+    { value: "intelbwe", text: "Intel HEDT: Broadwell-E" },
+    { value: "intelslx", text: "Intel HEDT: Skylake-X/W and Cascade Lake-X/W" },
+    { value: "amdfx", text: "AMD Desktop: FX" },
+    { value: "amdzen", text: "AMD Desktop: Zen" }
+  ];
+  
+  export default cpu_arch_list;
