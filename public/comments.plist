@@ -442,6 +442,16 @@
 				</dict>
 			</intelprdintelcddintelsbdinteladlintelsbl>
 		</dict>
+		<key>Quirks</key>
+		<dict status="correct">
+			<key>ResizeUsePciRbIo</key>
+			<dict status="correct">
+				<key>NO</key>
+				<string>This quirk can improve compatibility and stability with certain hardware configurations, but should only be used if necessary.</string>
+				<key>YES</key>
+				<string/>
+			</dict>
+		</dict>
 	</dict>
 </dict>
 </plist>
