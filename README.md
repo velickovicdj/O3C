@@ -64,6 +64,19 @@ Custom tags are used in the `comments.plist` to provide additional customization
 
 In this example, O3C will only show comments that apply to the selected architecture and only if the property value is set to "YES" (true).
 
+## Setup
+
+To run O3C on your machine, follow these steps:
+
+1. Install [Node.js](https://nodejs.org/en/download) if you haven't already.
+2. Clone this repository by running `git clone https://github.com/velickovicdj/O3C.git` in your terminal.
+3. Navigate to the root directory of the cloned repository.
+4. Run `npm install` to install the required dependencies.
+5. Run `npm start` to start the app in development mode.
+6. Open [http://localhost:3000](http://localhost:3000) in your browser to view the app.
+
+To build the app, simply run `npm build` in your terminal.
+
 ## Contributing and Feedback
 
 If you encounter any issues with O3C or have suggestions for improving it, please feel free to submit an issue on GitHub or contact me directly at <a href="mailto:djolevelicko@gmail.com">djolevelicko@gmail.com</a>. 
