@@ -3,7 +3,7 @@ import cpu_arch_list from "../cpuArchList";
 import { ReactComponent as PlistFileIcon } from "../assets/icons/plist.svg";
 
 export default function Reader({ setViewerData }) {
-    const defaultValue = "0.9.1";
+    const defaultValue = "0.9.2";
 
     const storeData = file => {
         if (file.name.match(/\.[0-9a-z]+$/i)[0] === ".plist") { // Check for valid file extension
