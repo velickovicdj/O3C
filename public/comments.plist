@@ -250,6 +250,13 @@
 					<string/>
 				</amdfxamdzen>
 			</dict>
+			<key>DisableIoMapperMapping</key>
+			<dict status="correct">
+				<key>YES</key>
+				<string/>
+				<key>NO</key>
+				<string>If macOS 13.3+ with enabled AppleVTD is causing Wifi, Ethernet or Thunderbolt issues, enable this quirk.</string>
+			</dict>
 			<key>LapicKernelPanic</key>
 			<dict>
 				<key status="warning">YES</key>
