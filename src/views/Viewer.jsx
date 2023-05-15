@@ -35,6 +35,8 @@ export default class Viewer extends React.Component{
                     userPlist: userPlistData,
                     errors: errors
                 });
+                
+                localStorage.setItem("default-cpu-arch", this.props.viewerData.CPU);
             }catch(error) {
                 this.setState({errors: [...this.state.errors, error]});
             }

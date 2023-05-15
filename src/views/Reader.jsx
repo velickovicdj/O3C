@@ -3,7 +3,8 @@ import cpu_arch_list from "../cpuArchList";
 import { ReactComponent as PlistFileIcon } from "../assets/icons/plist.svg";
 
 export default function Reader({ setViewerData }) {
-    const defaultValue = "0.9.2";
+    const defaultOCValue = "0.9.2";
+    const defaultCpuArch = localStorage.getItem("default-cpu-arch") ?? "intelprd";
 
     const storeData = file => {
         if (file.name.match(/\.[0-9a-z]+$/i)[0] === ".plist") { // Check for valid file extension
@@ -42,27 +43,27 @@ export default function Reader({ setViewerData }) {
             <div className="select">
                 <div className="cpu-arch">
                     <header>Choose your CPU architecture</header>
-                    <select id="selectcpu" name="selectcpu" defaultValue="intelprd">
+                    <select id="selectcpu" name="selectcpu" defaultValue={defaultCpuArch}>
                         {cpu_arch_list.map(cpu => <option key={cpu.value} value={cpu.value}>{cpu.text}</option>)}
                     </select>
                 </div>
                 <div className="oc-version">
                     <header>Choose your OpenCore version</header>
-                    <select id="selectoc" name="selectoc" defaultValue={defaultValue}>
+                    <select id="selectoc" name="selectoc" defaultValue={defaultOCValue}>
                         {(() => {
                             let options = [];
                             
                             for (let major = 0; major <= 1; major++) {
                                 const minorStart = major === 0 ? 7 : 0;
-                                const minorEnd = major === 1 ? parseInt(defaultValue.split(".")[1]) : 9;
+                                const minorEnd = major === 1 ? parseInt(defaultOCValue.split(".")[1]) : 9;
                                 
                                 for (let minor = minorStart; minor <= minorEnd; minor++) {
                                     const patchStart = (major === 0 && minor === 7) ? 3 : 0;
-                                    const patchEnd = (major === 1 && minor === parseInt(defaultValue.split(".")[1])) ? parseInt(defaultValue.split(".")[2]) : 9;
+                                    const patchEnd = (major === 1 && minor === parseInt(defaultOCValue.split(".")[1])) ? parseInt(defaultOCValue.split(".")[2]) : 9;
                                     
                                     for (let patch = patchStart; patch <= patchEnd; patch++) {
                                         const value = `${major}.${minor}.${patch}`;
-                                        if (value >= "0.7.3" && value <= defaultValue) {
+                                        if (value >= "0.7.3" && value <= defaultOCValue) {
                                             options.push(<option key={value} value={value}>{value}</option>);
                                         }
                                     }
