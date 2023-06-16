@@ -449,6 +449,11 @@
 				</dict>
 			</intelprdintelcddintelsbdinteladlintelsbl>
 		</dict>
+		<key>Output</key>
+		<dict status="correct">
+			<key>ConsoleFont</key>
+			<string/>
+		</dict>
 		<key>Quirks</key>
 		<dict status="correct">
 			<key>ResizeUsePciRbIo</key>
