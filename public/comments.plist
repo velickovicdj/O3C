@@ -289,6 +289,8 @@
 	<dict>
 		<key>Boot</key>
 		<dict status="correct">
+			<key>InstanceIdentifier</key>
+			<string/>
 			<key>PickerVariant</key>
 			<string/>
 		</dict>
