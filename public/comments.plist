@@ -465,6 +465,8 @@
 				<key>YES</key>
 				<string/>
 			</dict>
+            <key>ShimRetainProtocol</key>
+			<string/>
 		</dict>
 	</dict>
 </dict>
