@@ -3,7 +3,7 @@ import cpu_arch_list from "../cpuArchList";
 import { ReactComponent as PlistFileIcon } from "../assets/icons/plist.svg";
 
 export default function Reader({ setViewerData }) {
-    const defaultOCValue = "0.9.4";
+    const defaultOCValue = "0.9.5";
     const defaultCpuArch = localStorage.getItem("default-cpu-arch") ?? "intelprd";
 
     const storeData = file => {
