@@ -3,7 +3,7 @@ import { ReactComponent as LinkIcon } from "../assets/icons/link.svg";
 import logo from "../assets/logo.png";
 
 export default function Navbar(){
-    const [isDarkThemeActive, setDarkThemeActive] = React.useState(false);
+    const [isDarkThemeActive, setDarkThemeActive] = React.useState(localStorage.getItem("dark") ?? false);
 
 	const switchTheme = () => {
 		if (isDarkThemeActive){
