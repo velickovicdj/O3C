@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { ReactComponent as LinkIcon } from "../assets/icons/link.svg";
 import logo from "../assets/logo.png";
 
 export default function Navbar(){
     const [isDarkThemeActive, setDarkThemeActive] = React.useState(localStorage.getItem("dark") ?? false);
+    const [isMenuOpen, setMenuOpen] = useState(false);
 
 	const switchTheme = () => {
 		if (isDarkThemeActive){
@@ -24,7 +25,12 @@ export default function Navbar(){
                     <h1>O3C</h1>
                 </div>
             </a>
-            <ul>
+            <div className={`burger-menu${isMenuOpen ? " open" : ""}`} onClick={() => setMenuOpen(!isMenuOpen)}>
+                <div className="bar" />
+                <div className="bar" />
+                <div className="bar" />
+            </div>
+            <ul {...isMenuOpen && { className: "open" }}>
                 <li onClick={switchTheme}>
                     {isDarkThemeActive ? "Switch to light mode" : "Switch to dark mode"}
                 </li>
