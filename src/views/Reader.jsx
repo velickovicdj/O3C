@@ -43,7 +43,7 @@ export default function Reader({ setViewerData }) {
             <div className="select">
                 <div className="cpu-arch">
                     <header>Choose your CPU architecture</header>
-                    <select id="selectcpu" name="selectcpu" defaultValue={defaultCpuArch}>
+                    <select id="selectcpu" name="selectcpu" defaultValue={defaultCpuArch} style={{ width: "100%" }}>
                         {cpu_arch_list.map(cpu => <option key={cpu.value} value={cpu.value}>{cpu.text}</option>)}
                     </select>
                 </div>
