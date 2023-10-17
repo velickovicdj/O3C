@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>#WARNING</key>
-	<string>This file is heavily modified for use with @velickovicdj's OpenCore Sanity Checker. Do NOT try loading it.</string>
+	<string>This file is heavily modified for use with @velickovicdj's OpenCore Config Checker. Do NOT try loading it.</string>
 	<key>Link</key>
 	<intelprd><link href="https://dortania.github.io/OpenCore-Install-Guide/config.plist/penryn.html">Desktop Yonah, Conroe and Penryn</link></intelprd>
 	<intelcdd><link href="https://dortania.github.io/OpenCore-Install-Guide/config.plist/clarkdale.html">Desktop Lynnfield and Clarkdale</link></intelcdd>

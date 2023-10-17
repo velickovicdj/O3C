@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>#WARNING</key>
-	<string>This file is heavily modified for use with @velickovicdj's OpenCore Sanity Checker. Do NOT try loading it.</string>
+	<string>This file is heavily modified for use with @velickovicdj's OpenCore Config Checker. Do NOT try loading it.</string>
 	<key>ACPI</key>
 	<dict>
 		<key>Add</key>

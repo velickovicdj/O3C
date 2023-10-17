@@ -56,7 +56,7 @@ export default class Viewer extends React.Component{
         return(
             <div className="viewer">
                 <header>
-                    <h1>{this.state.comments?.Link} OpenCore-{this.props.viewerData.OC} Sanity Check</h1>
+                    <h1>{this.state.comments?.Link} OpenCore-{this.props.viewerData.OC} Config Check</h1>
                 </header>
                 <div className="errors">
                     {this.state.errors?.map((error, index) => this.print(index, {status: "error", content: error}))}
