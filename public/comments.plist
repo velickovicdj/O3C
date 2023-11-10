@@ -97,6 +97,19 @@
 			<string>If you use SSTD-XOSI.aml for enabling the trackpad, make sure to include <link href="https://dortania.github.io/Getting-Started-With-ACPI/Laptops/trackpad-methods/manual.html#osi-to-xosi">_OSI to XOSI rename</link> here.</string>
 		</intelhwlintelbwlintelsllintelkllintelcfllintelcllintelill>
 	</dict>
+	<key>Booter</key>
+	<dict>
+		<key>Quirks</key>
+		<dict>
+			<key>FixupAppleEfiImages</key>
+			<dict>
+				<key status="info">YES</key>
+				<string>Caution: Enabling may compromise secure boot as it modifies boot.efi images in memory for compatibility. Recommended only if facing boot errors on macOS 10.4 to 10.12.</string>
+				<key status="correct">NO</key>
+				<string>Fixes issues in early boot.efi images for compatibility with modern loaders. Enable if encountering boot errors on macOS 10.4 to 10.12.</string>
+			</dict>
+		</dict>
+	</dict>
 	<key>Kernel</key>
 	<dict>
 		<key>Add</key>
